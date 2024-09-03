@@ -1,31 +1,31 @@
 function generateVCard() {
-    const form = document.getElementById('contactForm');
-    const name = form.name.value;
-    const phone = form.phone.value;
-    const email = form.email.value;
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const company = document.getElementById('company').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const website = document.getElementById('website').value;
 
-    // Create vCard data as a string
-    const vCardData = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        `FN:${name}`,
-        `TEL;TYPE=CELL:${phone}`,
-        `EMAIL:${email}`,
-        "END:VCARD"
-    ].join("\n");
+    const fullName = `${firstName} ${lastName}`;
 
-    // Convert the vCard data to a Blob and create a download link
-    const blob = new Blob([vCardData], { type: "text/vcard" });
+    const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:${fullName}
+ORG:${company}
+TEL:${phone}
+EMAIL:${email}
+ADR:${address}
+URL:${website}
+END:VCARD`;
+
+    const blob = new Blob([vCardData], { type: 'text/vcard' });
     const url = URL.createObjectURL(blob);
 
-    // Create a temporary link to download the vCard
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${name}.vcf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${fullName}.vcf`;
+    a.click();
 
-    // Cleanup the URL object
     URL.revokeObjectURL(url);
 }
