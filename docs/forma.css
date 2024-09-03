@@ -15,7 +15,7 @@ body {
     margin: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
 }
@@ -35,6 +35,7 @@ body {
 input[type="text"],
 input[type="tel"],
 input[type="email"],
+input[type="url"],
 button {
     width: calc(100% - 20px);
     padding: 10px;
@@ -42,13 +43,16 @@ button {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #0056b3;
 }
@@ -60,7 +64,9 @@ button:hover {
         margin: 5px;
     }
 
-    input, button {
+    input,
+    button {
         font-size: 0.9rem;
+        width: calc(100% - 16px); /* Adjusted to ensure padding doesn't overflow */
     }
 }

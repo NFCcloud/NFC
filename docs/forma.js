@@ -12,6 +12,7 @@ function generateVCard() {
     const vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:${fullName}
+N:${lastName};${firstName};;;
 ORG:${company}
 TEL:${phone}
 EMAIL:${email}

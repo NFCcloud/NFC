@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFC card</title>
+    <title>NFC Card</title>
     <link rel="stylesheet" href="forma.css">
 </head>
 <body>
@@ -32,11 +32,13 @@
                 <label for="website">Website:</label>
                 <input type="url" id="website" name="website" value="https://example.com" readonly><br>
 
+                <!-- The button to generate and download the vCard -->
                 <button type="button" onclick="generateVCard()">Save to Phone</button>
             </form>
         </div>
     </div>
 
+    <!-- Linking to the external JavaScript file that contains the generateVCard function -->
     <script src="forma.js"></script>
 </body>
 </html>
