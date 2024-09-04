@@ -10,9 +10,9 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    margin: 10px;
+    max-width: 400px; /* Reduced max-width */
+    padding: 15px; /* Reduced padding */
+    margin: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -21,14 +21,14 @@ body {
 }
 
 .logo {
-    max-width: 100%;
+    max-width: 80%; /* Adjusted to be smaller */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
 }
 
 .form-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px; /* Reduced to fit more content in view */
     margin: auto;
 }
 
@@ -37,9 +37,9 @@ input[type="tel"],
 input[type="email"],
 input[type="url"],
 button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px 0;
+    width: calc(100% - 16px); /* Reduced width to fit more neatly */
+    padding: 8px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -67,6 +67,6 @@ button:hover {
     input,
     button {
         font-size: 0.9rem;
-        width: calc(100% - 16px); /* Adjusted to ensure padding doesn't overflow */
+        width: calc(100% - 14px); /* Adjusted width for smaller screens */
     }
 }
